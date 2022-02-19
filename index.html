@@ -15,22 +15,48 @@
 </head>
 
 <body>
+ <div>
 
- <h1>program to ask for a name until the user enters END"</h1>
- <button class="btn btn-outline-primary " onclick="nameArray()">start</button>
- <p>Name entered:</p>
- <p id="demo"></p>
+  <h1>program to ask for a name until the user enters END"</h1>
+  <button class="btn btn-outline-primary " onclick="nameArray()">start</button>
+  <p>Name entered:</p>
+  <p id="demo"></p>
+ </div>
+
+ <div>
+  <h1>program to sum positive number</h1>
+  <button class="btn btn-outline-primary " onclick="Sumnum()">start</button>
+  <p>sum of number entered:</p>
+  <p id="me"></p>
+ </div>
 
 
  <script>
   const Name = [];
+
   function nameArray() {
    while (newname != "END") {
     var newname = prompt("Enter Name:");
     Name.push(newname);
-    document.getElementById("demo").innerHTML = Name;
+
    }
    alert("Am done!");
+   document.getElementById("demo").innerHTML = Name.slice(0, (Name.length - 1));
+  }
+
+
+  var sum = 0;
+  var num = 0;
+  function Sumnum() {
+   while (num >= 0) {
+    num = parseInt(prompt("Enter number:"));
+    sum = (sum + num);
+
+   }
+   alert(sum - num);
+   document.getElementById("me").innerHTML = (sum - num);
+
+
   }
 
  </script>
